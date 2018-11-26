@@ -1,0 +1,7 @@
+#tform:ios,'8.0'
+inhibit_all_warnings! #消除警告
+target 'YYToolDemo' do
+pod 'MJExtension', '~> 3.0.13'
+pod 'IQKeyboardManager', '~> 5.0.7'
+pod 'Masonry', '~> 1.1.0'
+end

@@ -1,0 +1,136 @@
+//
+//  Macros.pch
+//  ChargingPileApp
+//
+//  Created by CityLogistics-PC on 2018/6/15.
+//  Copyright © 2018年 XYbaidumap-Demo. All rights reserved.
+//
+
+#ifndef Macros_pch
+#define Macros_pch
+
+#pragma mark ===============  服务器地址  ===============
+// 正式服务器  正式数据库域名
+//#define TC_SERVER_PREFIX @"http://admin.itcup.cn/"
+//测试服务器
+//#define TC_SERVER_PREFIX @"http://39.108.174.57:8090/"
+//怡佳本地的
+//#define TC_SERVER_PREFIX @"http://192.168.1.168:8090/"
+//烨芸本地
+//#define TC_SERVER_PREFIX @"http://192.168.1.107/"
+//test  app 开发内测地址
+//#define TC_SERVER_PREFIX @"http://test.itcup.cn/"
+//tc   app内测/对外演示地址
+#define TC_SERVER_PREFIX @"http://tc.itcup.cn/"
+//jc 核对数据专用地址
+//#define TC_SERVER_PREFIX @"http://jc.itcup.cn/"
+
+#pragma mark ===============  快捷创建颜色对象  ===============
+
+//可以设置透明度
+#define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+
+//透明度为1
+#define RGB(r,g,b) RGBA(r,g,b,1.0f)
+
+#pragma mark ===============  常用背景色  ===============
+//分割线的颜色
+#define TCSeparatorColor TCColor(238, 238, 238)
+//表格背景色
+#define TCTableViewColor TCColor(240, 240, 240)
+
+#pragma mark ===============  分辨率宽度和高度 ===============
+// 分辨率宽度
+#define TC_SCREEN_SCALE_WIDTH (int)(TC_SCREEN_WIDTH * [UIScreen mainScreen].scale)
+// 分辨率高度
+#define TC_SCREEN_SCALE_HEIGHT (int)(TC_SCREEN_HEIGHT * [UIScreen mainScreen].scale)
+
+#pragma mark ===============  屏幕宽度和高度 ===============
+// 屏幕宽度
+#define TC_SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+// 屏幕高度
+#define TC_SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+
+#pragma mark ===============  屏幕尺寸自适应  ===============
+//宽度
+#define AdaptiveW(x)   x * TC_SCREEN_WIDTH / 375
+//高度
+//#define AdaptiveH(x)    x * TC_SCREEN_HEIGHT / 667
+
+#pragma mark ===============  导航条的高度  ===============
+#define TopBarHeight 64.5
+
+#pragma mark ===============  字体自适应  ===============
+
+// MainScreen bounds
+#define Main_Screen_Bounds [[UIScreen mainScreen] bounds]
+
+//字体大小自适应
+//IPHONE5
+#define IS_IPHONE_5 ([[UIScreen mainScreen] bounds].size.height == 568.0f)
+//IPHONE6
+#define IS_IPHONE_6 ([[UIScreen mainScreen] bounds].size.height == 667.0f)
+//IPHONE6_plus
+#define IS_IPHONE_6_PLUS ([[UIScreen mainScreen] bounds].size.height == 736.0f)
+#define IPHONE5_INCREMENT 0
+#define IPHONE6_INCREMENT 1
+#define IPHONE6PLUS_INCREMENT 1.5
+
+// 字体大小(常规/粗体)
+#define BOLDSYSTEMFONT(FONTSIZE)[UIFont boldSystemFontOfSize:FONTSIZE]
+#define SYSTEMFONT(FONTSIZE)    [UIFont systemFontOfSize:FONTSIZE]
+#define FONT(NAME, FONTSIZE)    [UIFont fontWithName:(NAME) size:(FONTSIZE)]
+
+#pragma mark ===============  当前ios系统版本  ===============
+
+#define IOS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
+
+#pragma mark =============== 判断对象是否为空  ===============
+//字符串是否为空
+#define kStringIsEmpty(str) ([str isKindOfClass:[NSNull class]] || str == nil || [str length] < 1 ? YES : NO )
+//数组是否为空
+#define kArrayIsEmpty(array) (array == nil || [array isKindOfClass:[NSNull class]] || array.count == 0)
+//字典是否为空
+#define kDictIsEmpty(dic) (dic == nil || [dic isKindOfClass:[NSNull class]] || dic.allKeys == 0)
+//是否是空对象
+#define kObjectIsEmpty(_object) (_object == nil \
+|| [_object isKindOfClass:[NSNull class]] \
+|| ([_object respondsToSelector:@selector(length)] && [(NSData *)_object length] == 0) \
+|| ([_object respondsToSelector:@selector(count)] && [(NSArray *)_object count] == 0))
+
+/** imageNamed**/
+#define MMIMAGENAMED(name) [UIImage imageNamed:name]
+/** *白色*/
+#define MWhite [UIColor whiteColor]
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+//字体
+#define H22                [UIFont systemFontOfSize:22]
+#define H20                [UIFont systemFontOfSize:20]
+#define H18                [UIFont systemFontOfSize:18]
+#define H16                [UIFont systemFontOfSize:16]
+#define H15                [UIFont systemFontOfSize:15]
+#define H14                [UIFont systemFontOfSize:14]
+#define H13                [UIFont systemFontOfSize:13]
+#define H12                [UIFont systemFontOfSize:12]
+#define H11                [UIFont systemFontOfSize:11]
+#define H10                [UIFont systemFontOfSize:10]
+//颜色
+#define Color_RGB(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0  alpha:1.0]
+
+#define Color_BG           Color_RGB(245, 245, 245)
+#define Color_Line         Color_RGB(240, 240, 240)
+#define Color_H1           Color_RGB(77, 77, 77)
+#define Color_Random       [UIColor colorWithRed:arc4random()%256/255.0 green:arc4random()%256/255.0 blue:arc4random()%256/255.0 alpha:1.0]
+
+#define Color_White        [UIColor whiteColor]
+#define Color_Gray         [UIColor grayColor]
+#define Color_LightGray    [UIColor lightGrayColor]
+#define Color_Black        [UIColor blackColor]
+#define Color_Red          [UIColor redColor]
+#define Color_Clear        [UIColor clearColor]
+#define Color_Green        [UIColor greenColor]
+#define Color_Blue         [UIColor blueColor]
+#define Color_Orange       [UIColor orangeColor]
+#define Color_Yellow       [UIColor yellowColor]
+#endif /* Macros_pch */

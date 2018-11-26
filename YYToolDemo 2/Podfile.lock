@@ -1,0 +1,24 @@
+PODS:
+  - IQKeyboardManager (5.0.8)
+  - Masonry (1.1.0)
+  - MJExtension (3.0.15.1)
+
+DEPENDENCIES:
+  - IQKeyboardManager (~> 5.0.7)
+  - Masonry (~> 1.1.0)
+  - MJExtension (~> 3.0.13)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - IQKeyboardManager
+    - Masonry
+    - MJExtension
+
+SPEC CHECKSUMS:
+  IQKeyboardManager: 266cb7b1d11f94a3e71229d77f960f9a1b538e5b
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
+
+PODFILE CHECKSUM: 263dd0d222ba2358d1c0736e7bfcf869b8344b4c
+
+COCOAPODS: 1.5.3
