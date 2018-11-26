@@ -22,6 +22,7 @@
 
 @implementation YYDemoViewController
 
+//只是为了测试是否更改了
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -63,6 +64,7 @@
 //    [_TableView reloadData];
      [self CreatView];
 }
+
 
 -(void)CreatView{
     UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(10, 10, 110, 150)];
